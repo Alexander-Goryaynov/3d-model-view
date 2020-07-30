@@ -40,16 +40,17 @@
             this.canvas.Size = new System.Drawing.Size(989, 573);
             this.canvas.TabIndex = 0;
             this.canvas.TabStop = false;
+            this.canvas.Click += new System.EventHandler(this.canvas_Click);
             // 
             // label
             // 
             this.label.AutoSize = true;
             this.label.Location = new System.Drawing.Point(13, 14);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(462, 13);
+            this.label.Size = new System.Drawing.Size(834, 13);
             this.label.TabIndex = 1;
-            this.label.Text = "Горизонтальное движение мыши вращает модель вокруг оси X, вертикальное - вокруг Y" +
-    "";
+            this.label.Text = "Горизонтальное движение мыши вращает модель вокруг оси X,   вертикальное - вокруг" +
+    " Y,   клик мыши - вокруг оси Z,   клавиша W - приблизить,   S - отодвинуть\r\n";
             // 
             // FormEngine
             // 
@@ -62,6 +63,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3D модель";
             this.Load += new System.EventHandler(this.FormEngine_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormEngine_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.canvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
